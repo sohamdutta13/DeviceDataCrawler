@@ -1,5 +1,30 @@
 apply plugin: 'com.android.library'
 
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'DeviceDataCrawler'
+
+    publishedGroupId = 'com.datacrawler'
+    libraryName = 'datacrawler'
+    artifact = 'datacrawler'
+
+    libraryDescription = 'A wrapper for android device data'
+
+    siteUrl = 'https://github.com/sohamdutta13/DeviceDataCrawler'
+    gitUrl = 'https://github.com/sohamdutta13/DeviceDataCrawler.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'sohamdutta13'
+    developerName = 'Soham Dutta'
+    developerEmail = 'sohamdutta13@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
@@ -26,3 +51,6 @@ dependencies {
     compile 'com.google.android.gms:play-services-location:9.2.1' //you can use newer GMS version if you need
     compile 'io.reactivex:rxjava:1.1.5' //you can override RxJava version if you need
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
